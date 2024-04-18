@@ -37,6 +37,36 @@ Watch Later:
 
 # How node works behind the scene
 
+Never Block The Event Loop.!!!
+
 # Asynchronous JS
 
-Stopped at 48. What is Express?
+# Restful API design
+
+API should be stateless, server doesnt hve to remember previous data
+
+Only return the data.length if its an array of data
+
+53. Handling POST Requests
+    middleware are fns that run between a req and res.
+
+# Middleware and the req-res cycle
+
+ex. parsing body, logging, setting headers, router...
+
+NB:
+the order of middleware in the stack is actually in the order it is written in the code.
+routers are middlewares but are specific to certain urls/routes!
+
+next() is used to run the next middleware in the stack. never forget to add next in your middleware !!.
+router is usually the last middleware in the stack so we dont call the next in it.
+
+Morgan is a 3rd party middleware that allows us see req data in console
+
+# Param middleware:
+
+param middleware runs when an assigned params is in the designated route path.
+
+remember to always return any verification done in a middleware to avoid moving to the next function as the case may be
+
+# Chaining multiple middleware functions:
