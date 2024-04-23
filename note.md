@@ -70,3 +70,5 @@ param middleware runs when an assigned params is in the designated route path.
 remember to always return any verification done in a middleware to avoid moving to the next function as the case may be
 
 # Chaining multiple middleware functions:
+
+...
