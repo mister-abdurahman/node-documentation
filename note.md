@@ -71,4 +71,19 @@ remember to always return any verification done in a middleware to avoid moving 
 
 # Chaining multiple middleware functions:
 
-...
+Dont forget, all routes are essentially middlewares and nodejs is a single threaded program
+
+# Serving static files:
+
+to serve static files, use the express.static method and parse the route containing the file
+
+# Environment variables:
+
+nodejs env are located in "process.env", while express env are in app.get("env").
+
+We use the dotenv package to configure env in the project. It works by adding the data in our dotenv file to nodejs environment variables.
+
+# Configure eslint an dprettier in your node app:
+
+don't forget eslint and prettier config files
+#68
