@@ -83,7 +83,27 @@ nodejs env are located in "process.env", while express env are in app.get("env")
 
 We use the dotenv package to configure env in the project. It works by adding the data in our dotenv file to nodejs environment variables.
 
-# Configure eslint an dprettier in your node app:
+# Configure eslint and prettier in your node app:
 
-don't forget eslint and prettier config files
-#68
+`npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react --save-dev`
+
+don't forget eslint and prettier config files, also configure eslint using the eslint config file
+
+# MongoDB:
+
+Database => Collection (Tables) => Document (Rows)
+
+MongoDB is stored in a data format like json but is called bson bcos it is "typed".
+
+Embedding/Denormalization is the act of including similar data in a single document which allows for quick access and easier data models BUT SQL data tables are normalized.
+
+current max size for each document is 16mb
+
+# Mongoose:
+
+is an Object Data Modeling library for mongodba nd nodejs providign a higher level of bstraction
+
+# Back-end Architecture:
+
+We use MVC (most popular), one of the majo use of MVC is to separate business logic from application logic.
+Keep application logic in controllers and keep business logic in model.
