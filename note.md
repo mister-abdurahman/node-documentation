@@ -107,3 +107,7 @@ is an Object Data Modeling library for mongodba nd nodejs providign a higher lev
 
 We use MVC (most popular), one of the majo use of MVC is to separate business logic from application logic.
 Keep application logic in controllers and keep business logic in model.
+
+# Creating document:
+
+use model.create and when using async/await use trycatch block too.
