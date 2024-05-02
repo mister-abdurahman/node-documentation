@@ -103,6 +103,8 @@ current max size for each document is 16mb
 
 is an Object Data Modeling library for mongodba nd nodejs providign a higher level of bstraction
 
+NB: methods that are available on model.prototype (in the docs) are only accesible on an instance model document rather than on the model itself.
+
 # Back-end Architecture:
 
 We use MVC (most popular), one of the majo use of MVC is to separate business logic from application logic.
@@ -111,3 +113,17 @@ Keep application logic in controllers and keep business logic in model.
 # Creating document:
 
 use model.create and when using async/await use trycatch block too.
+
+# Update document:
+
+use patch to update, also: findByIdAndUpdate works best with patch method
+
+# Delete document:
+
+in a DELETE restful api, its a convention to not retun anything back
+
+# Modelling:
+
+trim only works on string and is used to remove whitespaces
+
+NB: note that when you update your schema, the previously created model data recieves the default part of the updated schema.
