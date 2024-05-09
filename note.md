@@ -127,3 +127,23 @@ in a DELETE restful api, its a convention to not retun anything back
 trim only works on string and is used to remove whitespaces
 
 NB: note that when you update your schema, the previously created model data recieves the default part of the updated schema.
+
+# Importing development data:
+
+We created a script that deletes all data from database and also loads our developemnt data from a json file to the database, using the terminal. t'was fun !!! 😊😊😊
+
+process.argv gives us an array of the logs of our commands as we run them
+process.exit is kind of like an agressive way to stop our server
+
+# Filtering:
+
+there are 2 ways of attching a query to our mongodb fetch.
+
+- pass query as an object
+- chain queries (were, equals...)
+
+Passing the query is the most straightforward approach but we face risk of when a user adds a query that does not exist in our mongo doc, so the suggestion is to remove potential query words from our query.
+
+NB: when we do something like model.find(), it returns a mongoose object, on which we can then call our differetn methods (on query.prototype) so for things like sorting we do not immediately await the find method for example bcos the result of the await is not a mongoose object but a ready result, so we only await our query after adding the sorting logic
+
+In summary, for filtering we can say we use 2 steps: build query, execute query.
