@@ -147,3 +147,7 @@ Passing the query is the most straightforward approach but we face risk of when 
 NB: when we do something like model.find(), it returns a mongoose object, on which we can then call our differetn methods (on query.prototype) so for things like sorting we do not immediately await the find method for example bcos the result of the await is not a mongoose object but a ready result, so we only await our query after adding the sorting logic
 
 In summary, for filtering we can say we use 2 steps: build query, execute query.
+
+# Advanced filtering:
+
+like filtering for a greater than or less than value, we do so by passing our attr {gte, gt, lte, lt} in [] and then adding the $ sign (using the replace method).
