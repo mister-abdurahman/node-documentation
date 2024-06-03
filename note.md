@@ -150,4 +150,22 @@ In summary, for filtering we can say we use 2 steps: build query, execute query.
 
 # Advanced filtering:
 
-like filtering for a greater than or less than value, we do so by passing our attr {gte, gt, lte, lt} in [] and then adding the $ sign (using the replace method).
+like filtering for a greater than or less than value, we do so by passing our attr {gte, gt, lte, lt} in [] and then adding the $ sign (using the replace method). We also looked at sorting.
+
+# Field limiting:
+
+using mongoose select method and parsing a string of all the parameters separated by space, adding ia minus means to exclude a parameter rsther than select it to use.
+
+We can also permanently hide a data in the model file by setting "select" to false.
+
+# Pagination:
+
+Using limit and skip mongoose methods
+
+# Aliasing:
+
+prefilling queries to fetch for a speific kind of data. e.g: cheap and rated watches. using middlewares to set queries and assigning them to specific routes.
+
+# Refactoring:
+
+functions are refactored to classes with methods.
